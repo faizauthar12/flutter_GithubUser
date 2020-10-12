@@ -9,7 +9,12 @@ class GHUserBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: <Widget>[],
+      children: <Widget>[
+        Padding(
+          padding: EdgeInsets.only(top: 30),
+        ),
+        GHSearchResult(),
+      ],
     );
   }
 }
