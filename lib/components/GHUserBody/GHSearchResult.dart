@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:github_user/components/data/UserList.dart';
+import 'package:github_user/components/data/model.dart';
 
-class GHSearchResult extends StatelessWidget {
+class GHSearchResult extends StatefulWidget {
   const GHSearchResult({
     Key key,
   }) : super(key: key);
+
+  @override
+  _GHSearchResultState createState() => _GHSearchResultState();
+}
+
+class _GHSearchResultState extends State<GHSearchResult> {
+  List<User> _results = List();
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: new ListView.builder(
         scrollDirection: Axis.vertical,
-        itemCount: userList.length,
+        itemCount: _results.length,
         shrinkWrap: true,
         itemBuilder: (BuildContext context, int index) {
           return Center(
@@ -22,11 +29,11 @@ class GHSearchResult extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.only(right: 15),
                     child: Image.asset(
-                      userList[index].avatar,
+                      _results[index].avatar,
                       width: 85,
                     ),
                   ),
-                  Text(userList[index].login)
+                  Text(_results[index].login)
                 ],
               ),
             ),

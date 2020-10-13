@@ -1,5 +1,6 @@
-import 'model.dart';
+//import 'model.dart';
 
+/*
 final List<User> userList = [
   User(
     login: 'Username1',
@@ -42,3 +43,4 @@ final List<User> userList = [
     avatar: 'images/GitHub-Mark-120px-plus.png',
   ),
 ];
+*/
