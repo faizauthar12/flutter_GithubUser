@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'components/GHUserBody.dart';
-import 'components/GHSearchBox.dart';
+import 'home.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,22 +23,4 @@ class MyApp extends StatelessWidget {
       home: GHUserHome(),
     );
   }
-}
-
-class GHUserHome extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: buildAppBar(),
-      body: GHUserBody(),
-    );
-  }
-}
-
-AppBar buildAppBar() {
-  return AppBar(
-    elevation: 0,
-    backgroundColor: Colors.transparent,
-    title: GHSearchBox(),
-  );
 }
